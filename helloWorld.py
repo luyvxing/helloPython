@@ -80,3 +80,72 @@ L = [
     ['Adam', 'Bart', 'Lisa']
 ];
 print(L[0][0],L[1][1],L[2][-1]);
+
+#条件判断
+age = 3
+if age >18:
+	print('adult');
+elif age == 18:
+	print('just adult');
+else :
+	print('teenager');
+	
+
+##小明身高1.75，体重80.5kg。请根据BMI公式（体重除以身高的平方）帮小明计算他的BMI指数，并根据BMI指数：
+
+#低于18.5：过轻
+#18.5-25：正常
+#25-28：过重
+#28-32：肥胖
+#高于32：严重肥胖
+height = 1.75;
+weight = 80.5;
+
+bmi = weight / height / height;
+
+if bmi < 18.5 :
+ 	print('过轻');
+elif bmi < 25 :
+	print('正常');
+elif bmi < 28 :
+	print('过重');
+elif bmi <32 :
+	print ('肥胖');
+else :
+	print('严重肥胖');
+
+#for-in循环
+L = ['Bart', 'Lisa', 'Adam'];
+for name in L:
+	print('Hello,'+name+"!"+'\n')
+
+#字典dict
+d = {'mike':95,'bob':66,'kim':34};
+print(d['mike']); 
+#通过In来判断key是否存在
+print('boby' in d)
+#没找到key时指定返回的value
+print(d.get('bob',-2));
+#pop可以删除相应的key
+d.pop('bob');
+print(d);
+
+#set，key的集合，不存储value
+s = set ([1,2,23,4,4,5]);
+print(s);
+s.add(1);
+print(s);
+s.remove(23);
+print(s);
+#还可以对set进行交集和并集的操作（这个好棒哦~！）
+anotherS = set([9,2,3,4,6,2]);
+print(s & anotherS)
+print (s | anotherS)
+
+#abs()求绝对值，max()求最大值
+print(abs(-22))
+print(max(1,2,34,5))
+#可以把函数名赋给一个变量，相当于给函数取了个别名
+a = abs ;
+print(a(-33))
+print(hex(255))
